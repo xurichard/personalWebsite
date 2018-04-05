@@ -34,7 +34,8 @@ li {
   border-color: white;
 }
 li:hover {
-  background: #e53f2e;
+  /*background: #e53f2e;*/
+  background: #f1978e;
 }
 li.active {
   flex: 8;
@@ -47,26 +48,35 @@ li.active h2 {
 li.active .section-content {
   flex: 4;
   opacity: 1;
-  /*transform: scaleX(1);*/
+  transform: scaleX(1);
   color: #E74C3C;
+}
+li .section-title .header{
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
 }
 li .section-title {
   flex: 1;
   display: flex;
   align-items: center;
-  width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
   color: white;
 }
-li .section-title h2 {
+li .section-title .header h2 {
   margin: 0;
+  /*width: 200px; Hacky, if text goes over width, formmating will error*/
   transform: rotate(-90deg);
-  white-space: nowrap;
+  display:block;
+  white-space: pre;
+  overflow: visible;
 }
 li .section-content {
-  flex: 1;
+  flex: 0;
   display: flex;
   align-items: center;
   margin: 0;

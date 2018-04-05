@@ -1,14 +1,26 @@
 var section = $('li');
+var needToAddPhotos = true;
 
 function toggleAccordion() {
   section.removeClass('active');
   $(this).addClass('active');
 }
 
-section.on('click', toggleAccordion);
+// section.on('click', toggleAccordion);
+
+section.on('click', function(){
+  section.removeClass('active');
+  $(this).addClass('active');
+  if($(this)[0].className.includes("photoli") && needToAddPhotos){
+    setTimeout(function(){
+      appendPhotos(15);
+      needToAddPhotos = false;
+    }, 500); //wait as long as the slide transition defined in css
+  }
+});
+
 
 // For Photos
-
 var all_photos = []
 
 var flickerAPI = "https://api.flickr.com/services/rest/?&method=flickr.people.getPhotos&api_key=41dd3aff041c00c52febdef9786a9ca0&user_id=139169754@N02&format=json&nojsoncallback=1";
@@ -16,8 +28,8 @@ $.getJSON(flickerAPI, {
   format: "json"
 }, function( data ) {
   //just to get more random pages
-  var num = Math.floor(Math.random() * data.photos.pages)
-  setAllPhotos(num)
+  var num = Math.floor(Math.random() * data.photos.pages);
+  setAllPhotos(num);
 });
 
 
@@ -26,8 +38,8 @@ function setAllPhotos(page_num){
   $.getJSON(flickerAPI, {
   format: "json"
   }, function( data ) {
-    all_photos = data.photos.photo
-    appendPhotos(20)
+    all_photos = data.photos.photo;
+    console.log("Set");
   })
 }
 
@@ -66,6 +78,7 @@ function appendPhotos(num){
       // masonry does its thing
       $container.masonry( 'appended', $item );
     });
+    $('#container').masonry('layout');
   }
 }
 
