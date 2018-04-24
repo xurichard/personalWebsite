@@ -11,7 +11,7 @@ body {
   text-rendering: optimizelegibility;
 }
 
-ul {
+ul.accordion {
   display: flex;
   min-height: 100vh;
   max-height: 100vh;
@@ -21,7 +21,7 @@ ul {
   list-style-type: none;
 }
 
-li {
+li.accordion-fold {
   flex: 1;
   display: flex;
   align-items: stretch;
@@ -33,32 +33,37 @@ li {
   border-right: 2px solid white;
   border-color: white;
 }
-li:hover {
+li.accordion-fold:hover {
   /*background: #e53f2e;*/
   background: #f1978e;
 }
-li.active {
-  flex: 8;
+li.accordion-fold.active {
+  flex: 15;
   background: #fff;
   cursor: default;
 }
-li.active h2 {
-  color: #E74C3C;
+li.accordion-fold.active .section-title{
+  flex:0;
+  padding-right:15px;
 }
-li.active .section-content {
+li.accordion-fold.active h2 {
+  color: #E74C3C;
+  opacity: 0.2;
+}
+li.accordion-fold.active .section-content {
   flex: 4;
   opacity: 1;
   transform: scaleX(1);
   color: #E74C3C;
 }
-li .section-title .header{
-  width: 100px;
+li.accordion-fold .section-title .header{
+  width: 50px;
   height: auto;
   margin: 0 auto;
   padding: 10px;
   position: relative;
 }
-li .section-title {
+li.accordion-fold .section-title {
   flex: 1;
   display: flex;
   align-items: center;
@@ -67,15 +72,15 @@ li .section-title {
   text-align: center;
   color: white;
 }
-li .section-title .header h2 {
-  margin: 0;
+li.accordion-fold .section-title .header h2 {
+  margin: -100% -1000%;
   /*width: 200px; Hacky, if text goes over width, formmating will error*/
   transform: rotate(-90deg);
-  display:block;
+  transform-origin: center center;
   white-space: pre;
   overflow: visible;
 }
-li .section-content {
+li.accordion-fold .section-content {
   flex: 0;
   display: flex;
   align-items: center;
@@ -88,9 +93,23 @@ li .section-content {
 
 /* For Photos */
 
-li .section-content.photo {
+li.accordion-fold .section-content.photo {
   display:block;
   overflow:auto;
+  text-align: center;
+  line-height: 1.5;
+  color: #000;
+}
+
+li.accordion-fold .section-content.photo h1{
+  font-size: 3em;
+  font-weight: 350;
+  line-height: 1em;
+}
+
+li.accordion-fold .section-content.photo a{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 .item {
@@ -104,6 +123,302 @@ li .section-content.photo {
   width: 100%;
 }
 
-li .more{
+li.accordion-fold .more{
   overflow: auto;
 }
+
+/* For About Me Intro */
+div.intro{
+  line-height: 1.5;
+  color: #000;
+  padding-right:10px;
+  vertical-align: middle;
+  height:100%;
+}
+div.intro h1{
+  font-size: 4em;
+  font-weight: 350;
+  line-height: 1em;
+
+}
+div.intro h3{
+  font-size: 1em;
+}
+
+div.aboutme-container{
+  height:100%;
+}
+
+div.aboutme-row{
+  display: table-row;
+}
+div.aboutme .intro{
+  width:60%;
+  float:left;
+  height:100%;
+  padding-top:100px;
+}
+
+div.aboutme .sidebar{
+  width:40%;
+  float:right;
+  height:100%;
+}
+
+div.profilePicDiv{
+  width:100%;
+  height:40%;
+  padding-top:100px;
+}
+div.profilePic{
+  margin: 0 auto;
+  height:200px;
+  width:200px;
+  overflow:hidden;
+}
+div.profilePic img{
+  border-radius: 50%;
+  object-position: 100% 50%;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+div.links{
+  text-align: center;
+  padding-top: 50px;
+  line-height: 1.5;
+  color: #000;
+}
+
+div.links ul{
+  list-style-type: none;
+}
+div.links li{
+  margin: 10px 0;
+}
+div.links a{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+/* For Timeline */
+li.accordion-fold .section-content {
+  display: block;
+  overflow:auto;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 6px solid #E74C3C;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #FEDCD2;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+.img-circle {
+  border-radius: 50%;
+  overflow:hidden;
+  height:100%;
+  width:100%;
+}
+
+/* work experience */
+.job{
+  margin: 10 auto 10 auto;
+  border-radius: 25px;
+  border: 2px solid #000;
+  width:80%;
+  height:35%;
+  display:block;
+}
+
+div.wrapper{
+  text-align: center;
+  line-height: 1.5;
+  color: #000;
+  padding:10 10;
+}
+div.wrapper h1{
+  font-size: 3em;
+  font-weight: 350;
+  line-height: 1em;
+}
+div.wrapper .job h3{
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.3em;
+}
+div.wrapper .job li{
+  font-size: 0.8em;
+  font-weight: lighter;
+  line-height: 1.3em;
+  list-style-type: none;
+}
+div.wrapper .job ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div.wrapper .job .left{
+  float:left;
+  width:50%;
+  height:100%;
+  border-radius: 25px;
+  margin:auto;
+  text-align: center;
+  overflow:hidden;
+}
+
+div.wrapper .job .right{
+  text-align: left;
+  float:right;
+  width:50%;
+  height:100%;
+  border-radius: 25px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+

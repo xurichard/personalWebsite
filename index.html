@@ -1,44 +1,413 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Flexbox Accordion</title>
+  <title>Richard Xu</title>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-  <ul>
-    <li>
+  <ul class="accordion">
+    <li class="accordion-fold">
       <div class="section-title">
         <div class="header">
           <h2>Work Experience</h2>
         </div>
       </div>
       <div class="section-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+        <div class="wrapper">
+            <div>
+                <h1>Work Experience</h1>
+                <p>Here are my internships and full time positions and the projects I've worked on at these companies.</p>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/LBNL.png" alt="" style="height:100%;padding-top:5%;padding-bottom:5%">
+                </div>
+                <div class="right">
+                    <h3> Student Assistant
+                        <br> Lawrence Berkeley National Laboratory, China Energy Group
+                        <br> Aug 2016 - Feb 2017
+                    </h3>
+                    <ul>
+                        <li>Designed and implemented a GIS based energy flow tracking interface prototype.</li>
+                        <li>Iterated on the web interface to allow users more flexibility.</li>
+                        <li>Created API endpoints to inttegrate existing algorithms and database.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/tubemogul.png" alt="" style="height:100%">
+                </div>
+                <div class="right">
+                    <h3> Software Engineering Intern 
+                        <br> TubeMogul, real time bidding team
+                        <br> Jun-Aug 2016
+                    </h3>
+                    <ul>
+                        <li>Created pipeline for deployment of Maven project through Jenkins </li>
+                        <li>Fixed bugs in the caching framework to allow for faster <li>serialization </li>
+                        <li>Tested and verified local testing environment </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/ICHA-Logo.png" alt="" style="width:90%;padding-top:20%;">
+                </div>
+                <div class="right">
+                    <h3> Web Developer
+                        <br> International Cardiovascular Health Alliance
+                        <br> Nov 2014 - Aug 2015
+                    </h3>
+                    <ul>
+                        <li> Remade the ICHA website, <a href="http://www.ichaonline.org/index.html">ichaonline.org</a>, to incorporate bootstrap and PHPMailer. </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/bio_rad_logo.jpg" alt="" style="height:100%">
+                </div>
+                <div class="right">
+                    <h3> Engineering Intern
+                        <br> BioRad, qPCR team
+                        <br> Jun-Aug 2015
+                    </h3>
+                    <ul>
+                        <li>Built Qtools, an internal qPCR quatification tool</li>
+                        <li>Designed an information schema for migration from</li>
+                        <li>Implemented algorithms to translate raw qPCR data</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/ReUSE.jpeg" alt="" style="width:90%;padding-top:20%;">
+                </div>
+                <div class="right">
+                    <h3> Student Assistant
+                        <br> Campus Refuse and Recycling Services
+                        <br> Aug 2014 - May 2015
+                    </h3>
+                    <ul>
+                        <li>Implement projects to improve campus recycling and composting.</li>
+                        <li>Work with ReUSE to manage donation and collection stations across campus.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/ucsf-logo.png" alt="" style="height:100%">
+                </div>
+                <div class="right">
+                    <h3> Global Health Intern
+                        <br> UCSF, Global Health Department
+                        <br> Jun-Aug 2014
+                    </h3>
+                    <ul>
+                        <li>Redesigned capstone curriculum for global health students</li>
+                        <li>Changed website layout for more intuitive student-professor interaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
       </div>
     </li>
-    <li class="active">
+
+    <li class="accordion-fold">
       <div class="section-title">
         <div class="header">
           <h2>About Me</h2>
         </div>
       </div>
-      <div class="section-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+      <div class="section-content aboutme">
+        
+        <div class="aboutme-container">
+              <div class="intro">
+                <div>
+                    <h1><strong>HI, I'M <br><span class="name">RICHARD XU</span></strong></h1>
+                    <h3>Software Engineer | Bioengineer | Aesthetic Potato</h3>
+                    <p>I'm a recent graduate from the University of California, Berkeley with a major in Bioengineering, with a concentration in computational biology, and a minor in Electrical Engineering and Computer Science. I'm passionate about using software as a tool to solve biological problems. Scroll down to see more about me!
+                </div>
+              </div>
+              <div class="sidebar">
+                <div class="profilePicDiv">
+                    <div class="profilePic">
+                      <img src="images/me.jpg">
+                    </div>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li> <i class="fa fa-phone"></i> (425)-623-6872</li>
+                        <li> <i class="fa fa-envelope-open"></i> richardxu@berkeley.edu</li>
+                        <li> <i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/richardxu1/">linkedin/richardxu1</a></li>
+                        <li> <i class="fa fa-github"></i> <a href="https://github.com/xurichard">github/xurichard</a></li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/gameStart.jpg" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>1995</h4>
+                        <h4 class="subheading">Game Start</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">I was born in the quiet town of Walnut Creek, California. My parents had moved to the states a couple years ago, and were eager to start a family in the technological bubble called Silicon Valley. My dad was a material Scientist and my mom a registered nurse, and this was the start of my adventure!</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/portland.jpg" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>Sometime in 1998</h4>
+                        <h4 class="subheading">Portlandia</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Three years after I was born, my dad got relocated (thank you Fujitsu) and we moved to Beaverton, a small suburb of Portland, Oregon. In the state that was 99% forest, I grew to love the outdoors. I started discovering my interests as wide as they were, from soccer and swimming to playing with robots and gaming.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/longhorn.jpg" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 23,2004</h4>
+                        <h4 class="subheading">The day I became a cowboy</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">But eventually, we had to move again, this time to Austin, Texas. I moved in 5th grade and I was that new kid in class. Luckily, southern hospitality and tons of other Asian kids in my class gave me the opportunity to make many friends that I still talk to today, until...</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/Seattle.jpg" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 23, 2011</h4>
+                        <h4 class="subheading">Sleepless in Seattle</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">I moved again. And this time, it sucked. I moved away from all my friends into the rainy, gloomy Bellevue, WA, near Seattle. But in retrospect, it wasn't that bad, I made new friends, and grew in my interest in chess, knowledge bowl, model United Nations, philosophy and robotics. Yeah, I think I've come to adore Seattle weather.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/goldenGate.jpg" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 23, 2013</h4>
+                        <h4 class="subheading">Building, Berkeley and the Bay Area</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">But nothing beats California sunshine, and that's where I am now, in sunny, liberal, beautiful Berkeley, California. I love being close to the bay and being back in Silicon Valley! And I look forward to my next few years here.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/ucsf-logo.png" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>June 1, 2014</h4>
+                        <h4 class="subheading">UCWhereNow?</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Over the summer of 2014, I worked at UCSF as an intern in the global Health division. I really got a sense of global health disparities in this position and it really drove me to focus my career and research on leveling the playing field for everyone no matter race, gender or location.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+            <div class="timeline-image">
+                    <img class="img-circle" src="images/bio_rad_logo.jpg" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>June 15, 2015</h4>
+                        <h4 class="subheading">Working Hard</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Over this past summer (2015), I worked at Bio-Rad working on an internal tool to provide dynamic analysis on Digital Droplet PCR information. I honestly didn't find the project too exciting or novel, but the experience of working in an established company on an active project was well worth the 2 hour commute and sweltering heat.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img class="img-circle" src="images/tubemogul.png" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>June 6, 2016</h4>
+                        <h4 class="subheading">TubeMogul</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Over the summer of 2016, I worked at TubeMogul as a Software Engineering Intern. It was amazing seeing the huge codebase of a medium sized company and a cool experience to have my code pushed to production to teach tousands of requests per minute.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+            <div class="timeline-image">
+                    <img class="img-circle" src="images/BerkeleySeal.png" alt="" style="height:100%">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>August 23, 2017</h4>
+                        <h4 class="subheading">Working Hard</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">After exactly 4 years of attending the University of California, Berkeley, I graduated with a major in Bioengineering and a minor in Electrical Engineering and Computer Science.</p>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="img-circle" src="images/continue.png" alt="" style="height:100%">
+                </div>
+            </li>
+        </ul>
+
+        <div style="height:100px">
+        </div>
+
       </div>
-    </li><li>
+    </li>
+
+    <li class="active accordion-fold">
       <div class="section-title">
         <div class="header">
           <h2>Projects</h2>
         </div>
       </div>
       <div class="section-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
-      </div>
-    </li><li class="photoli">
+       <div class="wrapper">
+            <h1>Personal Projects</h1>
+            <p>Here are some of my most memorable projects.</p>
+            <div class="job">
+                <div class="left">
+                    <img src="images/projects/LangAndCog.png" alt="" style="width:90%; padding-top:10%;">
+                </div>
+                <div class="right">
+                    <h3> Spacial Scene Generation
+                        <br> <a href="https://github.com/xurichard/SpatialSceneGenerator">Github</a>
+                    </h3>
+                    <ul>
+                        <li>Generates random scenes based on given set of features by extrapolating information from an existing set of scenes for the Language and Cognition Laboratory at UC Berkeley.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/projects/TonerCurves.jpeg" alt="" style="height:90%; padding-top:5%">
+                </div>
+                <div class="right">
+                    <h3> Gradient Generation Algorithm for BioE121L
+                        <br> <a href="https://github.com/xurichard/GradientGenerator">Github</a>
+                    </h3>
+                    <ul>
+                        <li>Calculates the alpha values for the walls of our microfluidic gradient generator device for BioE121L.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job">
+                <div class="left">
+                    <img src="images/projects/DesInv190.jpg" alt="" style="height:90%; padding-top:5%;">
+                </div>
+                <div class="right">
+                    <h3> Final Project for Design Innovation 190
+                        <br> <a href="https://github.com/xurichard/DesInv190FinalProj">Github</a>
+                    </h3>
+                    <ul>
+                        <li>We built a pill dispenser machine that alerts appointed family members/friends of pill dispensing, this is the software that went on the raspberry pi.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="left">
+                    <img src="images/projects/CoffeeFinder.png" alt="" style="height:90%; padding-top:5%;">
+                </div>
+                <div class="right">
+                    <h3> API for finding nearest coffee shop
+                        <br> <a href="https://github.com/xurichard/coffeeFinder">Github</a>
+                    </h3>
+                    <ul>
+                        <li>Node js project for finding coffee shops for Kinsa. This was a coding challenge but I really enjoyed the process and figuring out node.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="left">
+                    <img src="images/projects/Classof2017Banner.png" alt="" style="height:90%;padding-top:5%">
+                </div>
+                <div class="right">
+                    <h3> University of California, Berkeley Class of 2017 Banner
+                    </h3>
+                    <ul>
+                        <li>I worked on the Class of 2017 Banner and class website for the University of California, Berkeley as a part of the design and tech committees. The process of formally creating the banner for the school and incorporating all the designs was a unique one. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="left">
+                    <img src="images/projects/Spiritus.png" alt="" style="height:90%;padding-top:5%">
+                </div>
+                <div class="right">
+                    <h3> Spiritus
+                        <br> KNOX Medical Diagnostics
+                    </h3>
+                    <ul>
+                        <li>Through Berkeley Innovation, my team and I redesigned the mobile application for KNOX Medical Diagnostics to create a more child-friendly and gamified interface to encourage daily usage. </li>
+                    </ul>
+                </div>
+            </div>
+            
+             <div class="job">
+                <div class="left">
+                    <img src="images/projects/CircleLogoMushu.png" alt="" style="height:90%;padding-top:5%">
+                </div>
+                <div class="right">
+                    <h3> Mushu
+                        <br> AFX dance
+                    </h3>
+                    <ul>
+                        <li>This was my first time designing apparel, but I was very hapy with the result which was printed for my dance team in Fall 2016, AFX Mushu.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </li>
+
+    <li class="photoli accordion-fold">
       <div class="section-title">
         <div class="header">
           <h2>Photography</h2>
@@ -46,6 +415,7 @@
       </div>
       <div id="photo"class="section-content photo" onscroll="photoScroll()">
         <h1>Photos</h1>
+        <p> Keep scrolling! For more photos, check out my instagram <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/richardxuxu/?hl=en">@richardxuxu</a> and my flickr <i class="fa fa-flickr"></i> <a href="https://www.flickr.com/photos/richardxu/">richardxu1995</a></p>
         <div id="container">
         </div>
       </div>
